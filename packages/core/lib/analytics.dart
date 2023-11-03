@@ -330,12 +330,12 @@ class Analytics with ClientMethods {
         "previous_build": previousContext.app.build,
       });
     }
-
-    track("Application Opened", properties: {
-      "from_background": false,
-      "version": context.app.version,
-      "build": context.app.build,
-    });
+    //  NOTE: this is an unnecessary event for us.
+    // track("Application Opened", properties: {
+    //   "from_background": false,
+    //   "version": context.app.version,
+    //   "build": context.app.build,
+    // });
   }
 
   Future _fetchSettings() async {
